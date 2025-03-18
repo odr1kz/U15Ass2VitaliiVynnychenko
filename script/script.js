@@ -1,17 +1,18 @@
-const navbarToggle = document.querySelector('.navbar-toggle');
-const navbarMenu = document.querySelector('.navbar-menu');
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
 
-navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navlist.classList.toggle('open');
+};
+
+const sr = ScrollReveal ({
+    distance: '65px',
+    duration: 2600,
+    delay: 450,
+    reset: true
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-        }
-    });
-});
+sr.reveal('.hero-text', {delay:200, origin:'top'});
+sr.reveal('.hero-img', {delay:450, origin:'top'});
+sr.reveal('.icons', {delay:500, origin:'left'});
