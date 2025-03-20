@@ -20,6 +20,75 @@
     --accent-color: #ff6b6b;
 }
 
+br {
+    display: block;
+    margin-bottom: 10px;
+    content: " ";
+}
+
+.line{
+    margin-top: 25px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 0.3px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+
+.about ul li {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.07); /* Subtle background */
+    padding: 12px 18px;
+    margin: 6px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222; /* Deep gray for a clean look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+.about ul li::before {
+    content: "•"; /* Custom bullet */
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.about ul li:hover {
+    background: rgba(0, 0, 0, 0.15); /* Slightly darker */
+    transform: translateX(5px); /* Smooth movement */
+    cursor: pointer;
+}
+
+.about ul li:hover::before {
+    color: var(--main-color);
+}
+
+
+
+#horizontal-line {
+    width: 775px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.55); /* Balanced transparency */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Soft but noticeable shadow */
+    position: absolute;
+    align-items: center;
+    margin: -8px;
+}
+
 body {
     min-height: 100vh;
     background: var(--bg-color);
@@ -38,6 +107,15 @@ html {
 
 p {
     font-size: 19px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -172,7 +250,7 @@ header {
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, rgb(0, 0, 0) 0%, #363636 28.53%, #5c5c5c 75.52%);
+    background: linear-gradient(245.59deg, rgb(44, 44, 44) 0%, #424242 28.53%, #616161 75.52%);
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -249,6 +327,26 @@ section{
     margin-right: 5px;
 }
 
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .50s ease;
+}
+
+.icons i:hover{
+    color: var(--main-color);
+    transform: translateY(-5px);
+}
+
 .icons a{
     display: block;
     width: 3rem;
@@ -268,17 +366,9 @@ section{
     background-color: var(--main-color);
 }
 
-.icons {
-    position: absolute;
-    top: 50%;
-    padding: 0 9%;
-    transform: translateY(-50%);
-}
-
 /* Responsive index */
 @media (max-width: 1535px){
     header{
-        background: var(--accent-color);
         padding: 20px 3%;
         transition: 0.2s;
     }
@@ -316,19 +406,18 @@ section{
         padding: 50px 20px;
         transition: all .55s ease;
     }
-
     .navlist a{
         margin-left: 0;
         display: block;
         margin: 7px 0;
     }
-    .menu-icon.open{
+    .navlist.open{
         right: 0;
     }
 }
 
 @media (max-width: 1340px){
-    .hero-img{
+    .hero-img img{
         width: 100%;
         height: auto;
     }
@@ -346,7 +435,7 @@ section{
         padding: 0 3%;
         transition: .2s;
     }
-    .hero-img{
+    .hero-text{
         padding-top: 115px;
     }
     .hero-img{
@@ -359,7 +448,7 @@ section{
     .hero{
         height: 100%;
         gap: 1rem;
-       
+        grid-template-columns: 1fr;
     }
     .icons{
         display: none;
@@ -594,12 +683,61 @@ footer {
     background: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
 }
         
 .dates-fees h1 {
-    color: var(--primary-color);
+    font-size: 42px;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+.dates-fees h1, .dates-fees h2 {
+    color: var(--primary-color);
+}
+
+.dates-fees p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.dates-fees ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+
+.dates-fees ul li {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.07); /* Subtle background */
+    padding: 12px 18px;
+    margin: 6px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222; /* Deep gray for a clean look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+.dates-fees ul li::before {
+    content: "📍"; /* Custom bullet */
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.dates-fees ul li:hover {
+    background: rgba(0, 0, 0, 0.15); /* Slightly darker */
+    transform: translateX(5px); /* Smooth movement */
+    cursor: pointer;
+}
+
+.dates-fees ul li:hover::before {
+    color: var(--main-color);
 }
         
 .dates-container {
