@@ -2,7 +2,15 @@ let menu = document.querySelector('#menu-icon');
 let navlist = document.querySelector('.navlist');
 
 menu.onclick = () => {
-    menu.classList.toggle('ri');
+    menu.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    menu.style.transform = 'scale(0.8)';
+
+    setTimeout(() => {
+        menu.classList.toggle('ri-menu-line');
+        menu.classList.toggle('ri-close-line');
+        menu.style.opacity = '1';
+        menu.style.transform = 'scale(1)';
+    }, 150);
     navlist.classList.toggle('open');
 };
 

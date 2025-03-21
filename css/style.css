@@ -39,28 +39,28 @@ p {
 }
 
 .about ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
     width: fit-content;
 }
 
 .about ul li {
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.07); /* Subtle background */
+    background: rgba(0, 0, 0, 0.07);
     padding: 12px 18px;
     margin: 6px 0;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
-    color: #222; /* Deep gray for a clean look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    color: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
 .about ul li::before {
-    content: "•"; /* Custom bullet */
+    content: "•";
     color: black;
     font-size: 20px;
     margin-right: 10px;
@@ -68,8 +68,8 @@ p {
 }
 
 .about ul li:hover {
-    background: rgba(0, 0, 0, 0.15); /* Slightly darker */
-    transform: translateX(5px); /* Smooth movement */
+    background: rgba(0, 0, 0, 0.15);
+    transform: translateX(5px);
     cursor: pointer;
 }
 
@@ -77,27 +77,24 @@ p {
     color: var(--main-color);
 }
 
-
-
 #horizontal-line {
     width: 775px;
     height: 3px;
-    background-color: rgba(0, 0, 0, 0.55); /* Balanced transparency */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Soft but noticeable shadow */
+    background-color: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     position: absolute;
-    align-items: center;
-    margin: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -8px;
 }
 
 body {
     min-height: 100vh;
-    background: var(--bg-color);
-    background-size: cover;
-    background-position: center;
-    color: var(--text-color);
-    background-color: var(--light-bg);
+    background: var(--light-bg);
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -144,8 +141,8 @@ p {
     font-weight: 600;
 }
 
-/* Header Styles */
 header {
+    height: 95px;
     position: fixed;
     right: 0;
     top: 0;
@@ -155,12 +152,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 5%;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
     transition: all 0.5s ease-in-out;
 }
 
-/* Navbar Styles */
 .navlist {
     display: flex;
     align-items: center;
@@ -174,7 +170,7 @@ header {
 
 .navlist a {
     position: relative;
-    color: var(--text-color); /* Use the defined text color */
+    color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
     padding: 10px 15px;
@@ -259,7 +255,13 @@ header {
 }
 
 section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 19%;
+    min-height: 400px;
+    padding: 100px 20vw;
 }
 
 .hero-text h5 {
@@ -430,6 +432,15 @@ section{
     #menu-icon{
         display: block;
     }
+    ul.navlist.open{
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(2.5px);
+        border-radius: 10px;
+        top: 100px;
+        height: 390px;
+        overflow: hidden;
+        transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
     .navlist{
         position: absolute;
         top: 100%;
@@ -503,17 +514,24 @@ section{
     }
 }
 
-@media (max-width: 580px){
+@media (max-width: 576px){
     .language-switch{
         margin-right: 15px;
         transition: all 1s ease;
     }
+    ul.navlist.open{
+        transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 }
 
-@media (max-width: 420px){
+@media (max-width: 419px){
     .language-switch{
         margin-right: 10px;
         transition: all 1s ease;
+    }
+    ul.navlist.open{
+        width: 100%;
+        transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 }
 
