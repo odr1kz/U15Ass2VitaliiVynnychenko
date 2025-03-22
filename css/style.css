@@ -98,7 +98,7 @@ p {
 
 body {
     min-height: 100vh;
-    background: var(--bg-color);
+    background: var(--dark-bg);
     color: white;
     line-height: 1.6;
     margin: 0;
@@ -283,7 +283,8 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
-    transform: translateY(-10px);
+    align-items: center;
+    transform: translateY(80px);
     margin-bottom: 12px;
 }
 
@@ -1439,7 +1440,7 @@ footer {
     text-align: center;
 }
 .about h1, .about h2 {
-    color: black;
+    color: var(--main-color);
 }
 
 .about p {
