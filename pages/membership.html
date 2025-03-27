@@ -25,7 +25,10 @@
         </ul>
     </nav>
     <div class="main">
-        <button class="language-switch">EN</button>
+        <select class="language-switch" onchange="changeLanguage(this.value)">
+            <option value="EN">English</option>
+            <option value="SK">Slovak</option>
+        </select>
         <i class="ri-menu-line" id="menu-icon"></i>
     </div>
     </header>

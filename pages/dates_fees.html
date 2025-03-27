@@ -25,7 +25,10 @@
         </ul>
     </nav>
     <div class="main">
-        <button class="language-switch">EN</button>
+        <select class="language-switch" onchange="changeLanguage(this.value)">
+            <option value="EN">English</option>
+            <option value="SK">Slovak</option>
+        </select>
         <i class="ri-menu-line" id="menu-icon"></i>
     </div>
     </header>
@@ -33,64 +36,116 @@
     <section class="dates-fees">
     <div class="about-text">
         <h1>Dates and Fees</h1>
-        <p>At Slovenské Vzdelávacie Centrum – South Manchester, we divide our academic year into four terms: Autumn, Winter, Spring, and Summer. This structure allows us to build learning themes and activities around seasonal and cultural events, while also ensuring alignment with South Manchester (Trafford Council) school holidays.</p>
-        <p>We offer Saturday Slovak language lessons at two locations:</p>
+        <p>At Slovenské Vzdelávacie Centrum – South Manchester, we divide our academic year into <strong>four terms: Autumn, Winter, Spring, and Summer</strong>. This structure allows us to build learning themes and activities around seasonal and cultural events, while also ensuring alignment with <strong>South Manchester (Trafford Council) school holidays</strong>.</p>
+        <p>We offer <strong>Saturday Slovak language lessons</strong> at two locations:</p>
 
-        <ul>
-            <li>Morning (AM) Sessions: 10:00 – 12:00 at The Firs Primary School</li>
-            <li>Afternoon (PM) Sessions: 14:00 – 16:00 at Sale High School</li>
+        <ul class="custom-list loc">
+            <li><strong>Morning (AM) Sessions:</strong>&#8203 10:00 – 12:00 at The Firs Primary School</li>
+            <li><strong>Afternoon (PM) Sessions:</strong>&#8203 14:00 – 16:00 at Sale High School</li>
         </ul>
 
-        <p>Although we primarily serve South Manchester, we welcome students from all areas.</p>
+        <p>Although we primarily serve <strong>South Manchester</strong>, we <strong>welcome students from all areas</strong>.</p>
         <h3>2024/2025 Term Dates</h3>
 
+        <br>
 
-        <div class="dates-container">
-            <div class="date-box">
-                <h2>Spring Session</h2>
-                <p>Start Date: March 10, 2025</p>
-                <p>End Date: June 20, 2025</p>
-                <p>Fee: €150</p>
-            </div>
-
-            <div class="date-box">
-                <h2>Summer Camp</h2>
-                <p>Start Date: July 5, 2025</p>
-                <p>End Date: August 15, 2025</p>
-                <p>Fee: €200</p>
-            </div>
-
-            <div class="date-box">
-                <h2>Autumn Session</h2>
-                <p>Start Date: September 5, 2025</p>
-                <p>End Date: December 10, 2025</p>
-                <p>Fee: €180</p>
-            </div>
-        </div>
-
-        <p>Note: Term dates align with Trafford Council school holidays where possible, though some variations may apply.</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Weeks</th>
+                    <th>Holidays</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Autumn</td>
+                    <td>2<sup>nd</sup> November 2024</td>
+                    <td>14<sup>th</sup> December 2024</td>
+                    <td>7 weeks</td>
+                    <td><strong>Christmas holiday</strong> after term ends</td>
+                </tr>
+                <tr>
+                    <td>Winter</td>
+                    <td>11<sup>th</sup> January 2025</td>
+                    <td>8<sup>th</sup> February 2025</td>
+                    <td>5 weeks</td>
+                    <td><strong>February holiday</strong> after term ends</td>
+                </tr>
+                <tr>
+                    <td>Spring</td>
+                    <td>1<sup>st</sup> March 2025</td>
+                    <td>17<sup>th</sup> May 2025</td>
+                    <td>10 weeks</td>
+                    <td>
+                        <strong>Easter holiday</strong> (no classes 12th & 19th April) <br>
+                        <strong>May holiday</strong> after term ends
+                    </td>
+                </tr>
+                <tr>
+                    <td>Summer</td>
+                    <td>7<sup>th</sup> June 2025</td>
+                    <td>12<sup>th</sup> July 2025</td>
+                    <td>6 weeks</td>
+                    <td><strong>Summer holiday</strong> after term ends</td>
+                </tr>
+            </tbody>
+        </table>
 
         <br>
-        <h3>Fees and Payment Options</h3>
-        <p>We offer two flexible payment options: Term Fees for committed learners and a Pay-As-You-Go option for families who prefer flexibility.</p>
+
+        <p><strong>Note:</strong> Term dates align with <strong>Trafford Council school holidays</strong> where possible, though some variations may apply.</p>
+
+        <br>
+        <h2>Fees and Payment Options</h2>
+        <p>We offer <strong>two flexible payment options: Term Fees</strong> for committed learners and a <strong>Pay-As-You-Go</strong> option for families who prefer flexibility.</p>
 
         <br>
         <h3>Term Fees</h3>
 
-        <ul>
-            <li>•	Autumn Term (7 weeks): £84</li>
-            <li>•	Winter Term (5 weeks): £60</li>
-            <li>•	Spring Term (10 weeks): £120</li>
-            <li>•	Summer Term (6 weeks): £72</li>
+        <ul class="custom-list dot">
+            <li>Autumn Term (7 weeks): £84</li>
+            <li>Winter Term (5 weeks): £60</li>
+            <li>Spring Term (10 weeks): £120</li>
+            <li>Summer Term (6 weeks): £72</li>
         </ul>
 
-        <p>Sibling Discount: Each additional sibling receives a 25% discount.</p>
+        <br>
+
+        <p><b>Sibling Discount:</b> Each additional sibling receives a <b>25% discount.</b></p>
+
+        <br>
+            <div id="horizontal-line"></div>
+        <br>
+        
+        <h2>Pay-As-You-Go Option</h2>
+        <p>For families who prefer flexibility, we offer a <b>Pay-As-You-Go</b> option:</p>
+
+        <ul class="custom-list dot">
+            <li><strong>Price per session: </strong>&#8203 £13 per Saturday</li>
+            <li><strong>Sibling Discount: </strong>&#8203 Each additional sibling receives<b>&#8203 a 25% discount</b> on their session fee.</li>
+        </ul>
+        <br>
+
+        <ul class="fees-list">
+        <li><strong>Example of Fees for Siblings:</strong></li>
+        <li>First Child: £13</li>
+        <li>Second Child (25% Discount): £9.75</li>
+        <li><strong>Total for Two Siblings:</strong> £22.75</li>
+        <li>Third Child (25% Discount): £9.75</li>
+        <li><strong>Total for Three Siblings:</strong> £32.50</li>
+        </ul>
 
         <br>
             <div id="horizontal-line"></div>
         <br>
 
-
+        <h2>Monthly Membership (Coming Soon!)</h2>
+        <p>We are currently developing <b>a monthly membership plan</b> to provide additional flexibility and benefits. More details will be available soon.</p>
+        <br>
+        <p><b>For payment details, sibling discounts, or any queries, please contact us</b>.</p>
 
     </div>    
     </section>

@@ -14,6 +14,16 @@ menu.onclick = () => {
     navlist.classList.toggle('open');
 };
 
+function updateLanguageLabels() {
+    const select = document.querySelector(".language-switch");
+    const isMobile = window.innerWidth <= 525;
+    select.options[0].textContent = isMobile ? "EN" : "English";
+    select.options[1].textContent = isMobile ? "SK" : "Slovak";
+}
+
+window.addEventListener("resize", updateLanguageLabels);
+window.addEventListener("load", updateLanguageLabels);
+
 document.querySelectorAll('.navlist a').forEach(link => {
     link.addEventListener('mouseenter', function(e) {
         const width = link.offsetWidth;
@@ -47,7 +57,6 @@ sr.reveal('.hero-text', {delay:200, origin:'top'});
 sr.reveal('.hero-img', {delay:450, origin:'top'});
 sr.reveal('.icons', {delay:500, origin:'left'});
 
-
 //Javascript for video slider nav
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
@@ -70,4 +79,6 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     })
 });
+
+//Animate On Scroll
 
