@@ -28,11 +28,12 @@
 }
 
 ::selection {
-    background: var(--bg-color);
+    background: var(--primary-color);
+    color: white;
 }
 
-p::selection, b::selection {
-    background: var(--primary-color);
+h1::selection{
+    background: var(--bg-color);
     color: white;
 }
 
@@ -742,7 +743,7 @@ table {
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    margin: 30px auto;
+    margin: 20px auto;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
@@ -1125,6 +1126,7 @@ section{
     color: #fff;
     margin-bottom: 40px;
 }
+
 .hero-text h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 90px;
@@ -1983,19 +1985,54 @@ footer {
     }
 }
 
-/* General List Styles */
+.events .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
 
+.events .image-container img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.events .image-container img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .events .image-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .events .image-container img {
+        max-width: 90%;
+    }
+}
+
+/* General List Styles */
 .bold-text {
     font-weight: bold;
 }
 
+/* Custom List Styles */
 .custom-list, .fees-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: fit-content;
+    width: 100%; /* Ensures it fits the section */
+    max-width: 100%; /* Prevents overflow */
 }
 
+/* Fees List Styles */
 .fees-list {
     color: var(--bg-color);
 }
@@ -2005,7 +2042,6 @@ footer {
 }
 
 /* Custom List Items */
-
 .custom-list li {
     display: flex;
     align-items: center;
@@ -2015,49 +2051,55 @@ footer {
     border-radius: 10px;
     font-size: 18px;
     font-weight: 500;
-    color: #222; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    color: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    width: 100%; /* Ensures it fills the section */
+    max-width: 100%; /* Prevents overflow */
+    box-sizing: border-box; /* Includes padding in width */
 }
 
+/* Prevents text overflow and keeps bold text inline */
+.custom-list li span {
+    flex: 1;
+    overflow-wrap: break-word; /* Ensures text wraps correctly */
+    word-break: break-word;
+}
+
+/* Icons Before List Items */
 .custom-list li::before {
-    font-size: 22px; 
+    font-size: 22px;
     margin-right: 10px;
     transition: color 0.3s ease-in-out;
+    flex-shrink: 0; /* Ensures icons don’t shrink */
 }
 
 /* Hover Effect */
-
 .custom-list li:hover {
     background: rgba(0, 0, 0, 0.15);
     transform: translateX(5px);
     cursor: pointer;
 }
 
-/* Pin Style */
+/* Icon Styles for Different Lists */
 .pin li::before {
     content: "📌";
     color: black;
 }
 
-.pin li {
-    margin-bottom: 4px;
-}
-
-/* Location Style */
 .loc li::before {
     content: "📍";
     color: black;
 }
 
-/* Dot Style */
 .dot li::before {
-    content: "•"; 
+    content: "•";
     color: black;
 }
 
-.pin li:hover::before, 
-.loc li:hover::before, 
+/* Icon Color Change on Hover */
+.pin li:hover::before,
+.loc li:hover::before,
 .dot li:hover::before {
     color: var(--main-color);
 }
@@ -2094,5 +2136,16 @@ footer {
 }
 
 .custom-list p a:hover {
+    text-decoration: underline;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline p, 
+.underline h1, 
+.underline h2, 
+.underline h3 {
     text-decoration: underline;
 }
