@@ -80,5 +80,42 @@ btns.forEach((btn, i) => {
     })
 });
 
+//Membership page
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Membership page loaded");
+    
+    const membershipLinks = document.querySelectorAll("a[href='#']");
+    membershipLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("This feature is coming soon!");
+        });
+    });
+
+    // Form validation (if needed)
+    const forms = document.querySelectorAll("form");
+    forms.forEach(form => {
+        form.addEventListener("submit", function (event) {
+            const inputs = form.querySelectorAll("input, textarea");
+            let valid = true;
+            
+            inputs.forEach(input => {
+                if (input.hasAttribute("required") && !input.value.trim()) {
+                    valid = false;
+                    input.style.border = "2px solid red";
+                } else {
+                    input.style.border = "";
+                }
+            });
+
+            if (!valid) {
+                event.preventDefault();
+                alert("Please fill in all required fields.");
+            }
+        });
+    });
+});
+
 //Animate On Scroll
 
