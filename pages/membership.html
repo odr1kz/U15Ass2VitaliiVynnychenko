@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" href="../Images/give-love.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
     <title>Slovak Charity</title>
 </head>
-<body>
+<body class="body-other">
     <header>
         <a href="#" class="logo">
             <img src="../images/give-love.png" alt="logo">
@@ -33,190 +34,233 @@
     </div>
     </header>
 
+        <div class="toast-container">
+            <div class="image">
+            <img src="../images/cover.png" alt="" />
+            </div>
+  
+            <div class="text-content">
+            <h3 class="underline">Monthly Membership (Coming Soon!)</h3>
+            <p><span>We are currently developing a <b>monthly membership</b> plan to provide additional flexibility and benefits. More details will be available soon.</span></p>
+
+            <p><span><b>For payment details, sibling discounts, or any queries, please <a href="#">contact us</a></b>.</span></p>
+            </div>
+  
+            <div class="close">
+            <img src="../images/close-icon.png" alt="" />
+            </div>
+        </div>
+
     <section class="membership">
         <div class="about-text">
-            <h3><span class="underline">Monthly Membership (Coming Soon!)</span></h3>
-            <p>We are currently developing a <b>monthly membership plan</b> to provide additional flexibility and benefits. More details will be available soon.</p>
-            <p><b>For payment details, sibling discounts, or any queries, please contact us.</b></p>
-    
-            <h3>Membership Registration</h3>
-            <form action="#" method="POST" class="membership-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                
-                <label for="mobile">Mobile Number:</label>
-                <input type="tel" id="mobile" name="mobile" required>
-                
-                <label for="membership-type">Select Membership Type:</label>
-                <select id="membership-type" name="membership-type" required>
-                    <option value="monthly">Monthly</option>
-                    <option value="yearly">Yearly</option>
-                </select>
-                
-                <button type="submit">Submit</button>
-            </form>
 
-            <br>
             <h1><span class="underline">Registration Forms</span></h1>
             <p>To participate in <b>Slovenské Vzdelávacie Centrum – South Manchester</b>, you may need to complete one of the following registration forms, depending on your involvement.</p>
-    
-            <h3><span class="underline">Slovak School Registration</span></h3>
-            <p>All students enrolling in our <b>Slovak School</b> must complete a registration form to ensure we provide the best possible learning experience tailored to their needs.</p>
-            <h3>How to Register</h3>
-            <ol>
-                <li><b>1. Complete the School Registration Form</b></li>
-                    <ul class="custom-list oval">
-                        <li>Access the form &#8203<a href="#">here</a></li>
-                        <li>Paper copies are available upon request via email or at our sessions.</li>
-                    </ul>
-                    
-                <br>
-                <li><b>2. Submit Your Form:</b></li>
-                    <ul class="custom-list oval">
-                        <li><b>Online:</b>&#8203 Fill out and submit electronically.</li>
-                        <li><b>In-person:</b>&#8203 Bring it to your first session.</li>
-                        <li><b>By email:</b>&#8203 Send it to &#8203<a href="mailto:info@slovakcharity.org">info@slovakcharity.org</a>.</li>
-                    </ul>
+
+            <div class="container">
                 
-                <br>
-                <li><b>3. Receive Confirmation</b></li> 
-                    <ul class="custom-list oval">
-                        <li>We will confirm your place via email.</li>
-                        <li>You will receive payment instructions and further details about your first session.</li>
-                    </ul>
-            </ol>
-
-            <br>
-    
-            <h3>What Information is Required?</h3>
-
-            <ul class="fees-list">
-                <li>Student details (name, age, language background)</li>
-                <li>Parent/guardian contact information</li>
-                <li>Emergency contact details</li>
-                <li>Medical or special educational needs (SEN) information</li>
-                <li>Preferred session (AM or PM)</li>
-                <li>Consent for photos, videos, and data handling</li>
-            </ul>
-
-            <br>
-                <div id="horizontal-line"></div>
-            <br>
-
-            <h3><span class="underline">Volunteer Registration</span></h3>
-            <p>We welcome <b>enthusiastic volunteers</b> who want to support our school and cultural activities.</p>
+                <div class="registration-container">
+                    <!-- Left Section - Descriptions -->
+                    <div class="description">
+                        <section class="registration-section">
+                            <h2><span class="underline">Slovak School Registration</span></h2>
+                            <p>All students enrolling in our <b>Slovak School</b> must complete a registration form to ensure we provide the best possible learning experience tailored to their needs.</p>
+                            
+                            <h3>How to Register</h3>
+                            <ol>
+                                <li><b>1. Complete the School Registration Form</b></li>
+                                    <ul class="custom-list-white oval">
+                                        <li><span>Access the form &#8203<a href="#">here</span></a></li>
+                                        <li><span>Paper copies are available upon request via email or at our sessions.</span></li>
+                                    </ul>
+                                    
+                                <br>
+                                <li><b>2. Submit Your Form:</b></li>
+                                    <ul class="custom-list-white oval">
+                                        <li><span><b>Online:</b>&#8203 Fill out and submit electronically.</span></li>
+                                        <li><span><b>In-person:</b>&#8203 Bring it to your first session.</span></li>
+                                        <li><span><b>By email:</b>&#8203 Send it to &#8203<a href="mailto:info@slovakcharity.org">info@slovakcharity.org</a>.</span></li>
+                                    </ul>
+                                
+                                <br>
+                                <li><b>3. Receive Confirmation</b></li> 
+                                    <ul class="custom-list-white oval">
+                                        <li><span>We will confirm your place via email.</span></li>
+                                        <li><span>You will receive payment instructions and further details about your first session.</span></li>
+                                    </ul>
+                            </ol>
+        
+                            <br>
             
-            <br>
+                            <h3>What Information is Required?</h3>
+        
+                                <ul class="fees-list">
+                                    <li><span>Student details (name, age, language background)</span></li>
+                                    <li><span>Parent/guardian contact information</span></li>
+                                    <li><span>Emergency contact details</span></li>
+                                    <li><span>Medical or special educational needs (SEN) information</span></li>
+                                    <li><span>Preferred session (AM or PM)</span></li>
+                                    <li><span>Consent for photos, videos, and data handling</span></li>
+                                </ul>
+    
+                        </section>
+                        
+                        <section class="registration-section">
 
-            <h3><b>How to Become a Volunteer</b></h3>
-
-            <br>
-
-            <ol>
-                <li><b>1. Complete the Volunteer Registration Form</b></li>
-                    <ul class="custom-list oval">
-                        <li>Fill it out &#8203<a href="#">here</a></li>
-                    </ul>
-                    
-                <br>
-
-                <li><b>2. Submit Your Form</b></li>
-                    <ul class="custom-list oval">
-                        <li><b>Online:</b>&#8203 Fill out and submit electronically.</li>
-                        <li><b>In-person:</b>&#8203 Hand in during a session.</li>
-                        <li><b>By email:</b>&#8203 Send it to &#8203<a href="mailto:svcmanchester@yahoo.com">svcmanchester@yahoo.com</a>.</li>
-                    </ul>
+                            <h2><span class="underline">Volunteer Registration</span></h2>
+                                <p>We welcome <b>enthusiastic volunteers</b> who want to support our school and cultural activities.</p>
+                            
                 
-                <br>
+                            <h3><b>How to Become a Volunteer</b></h3>
+                            <ol>
+                                <li><b>1. Complete the Volunteer Registration Form</b></li>
+                                    <ul class="custom-list-white oval">
+                                        <li><span>Fill it out &#8203<a href="#">here</a></span></li>
+                                    </ul>
+ 
+                                <br>
+                
+                                <li><b>2. Submit Your Form</b></li>
+                                    <ul class="custom-list-white oval">
+                                        <li><span><b>Online:</b>&#8203 Fill out and submit electronically.</span></li>
+                                        <li><span><b>In-person:</b>&#8203 Hand in during a session.</span</li>
+                                        <li><span><b>By email:</b>&#8203 Send it to &#8203<a href="mailto:svcmanchester@yahoo.com">svcmanchester@yahoo.com</a>.</span></li>
+                                    </ul>
+                                
+                                <br>
+                
+                                <li><b>3. DBS Check (if applicable)</b></li> 
+                                    <ul class="custom-list-white oval">
+                                        <li><span>Volunteers working directly with children may require a <b>DBS (Disclosure and Barring Service) check</b>. If you don’t have one, we can guide you through the process.</span></li>
+                                    </ul>
+                
+                                <br>
+                
+                                <li><b>4. Attend an Introductory Meeting</b></li>
+                                    <ul class="custom-list-white oval">
+                                        <li><span>We will arrange a short meeting to discuss <b>your role and how you can contribute</b>.</span></li>
+                                    </ul>    
+                
+                                <br>
+                            </ol>
+                
+                            <h3>Volunteer Roles Available</h3>
+                
+                            <ul class="fees-list">
+                                <li><span><b>Teaching Assistant</b> – Support educators.</span></li>
+                                <li><span><b>Event Coordinator</b> – Help organize cultural events.</span></li>
+                                <li><span><b>Fundraising & Sponsorship</b> – Assist with funding initiatives.</span></li>
+                                <li><span><b>Social Media & Marketing</b> – Promote activities.</span></li>
+                                <li><span><b>General Support</b> – Assist with various tasks.</span></li>
+                                <li><span><b>Interested?</b> Fill out the form and become part of our team!</span></li>
+                            </ul>
 
-                <li><b>3. DBS Check (if applicable)</b></li> 
-                    <ul class="custom-list oval">
-                        <li><span>Volunteers working directly with children may require a <b>DBS (Disclosure and Barring Service) check</b>. If you don’t have one, we can guide you through the process.</span></li>
-                    </ul>
+                        </section>
 
-                <br>
-
-                <li><b>4. Attend an Introductory Meeting</b></li>
-                    <ul class="custom-list oval">
-                        <li><span>We will arrange a short meeting to discuss <b>your role and how you can contribute</b>.</span></li>
-                    </ul>    
-
-                <br>
-            </ol>
-
-            <h3>Volunteer Roles Available</h3>
-
-                <li><b>Teaching Assistant</b> – Support educators.</li>
-                <li><b>Event Coordinator</b> – Help organize cultural events.</li>
-                <li><b>Fundraising & Sponsorship</b> – Assist with funding initiatives.</li>
-                <li><b>Social Media & Marketing</b> – Promote activities.</li>
-                <li><b>General Support</b> – Assist with various tasks.</li>
-                <li><b>Interested?</b> Fill out the form and become part of our team!</li>
-
-            <br>
-                <div id="horizontal-line"></div>
-            <br>
+                        <section class="registration-section"><h2 class="underline">Monthly Membership Interest Form</h2>
     
-            <h3><span class="underline">Monthly Membership Interest Form</span></h3>
-            <p><span>We are developing a <b>monthly membership program</b> for families who want <b>extra resources, preparation for "komisionálne skúšky," and additional learning support</b>.</span></p>
+                            <p><span>We are developing a <b>monthly membership program</b> for families who want <b>extra resources, preparation for "komisionálne skúšky," and additional learning support</b>.</span></p>
+                
+                            <h3>Who is this for?</h3>
+                                <ul class="custom-list-white yes">
+                                    <li><span>Families whose children are <b>registered in school in Slovakia</b> and need support preparing for exams.</span></li>
+                                    <li><span>Students looking for <b>extra Slovak language resources</b> beyond weekly classes.</span></li>
+                                    <li><span>Those interested in <b>additional cultural and educational activities</b>.</span></li>
+                                </ul>  
+                        
+                            <h3>Express Your Interest</h3> 
+                                <p><span>If you would like to become a member, please fill out our <b>Monthly Membership Interest Form <a href="#">here</a></b>. We will contact you once the program is finalised.</span></p>
 
-            <h3>Who is this for?</h3>
-                <ul class="custom-list yes">
-                    <li><span>Families whose children are <b>registered in school in Slovakia</b> and need support preparing for exams.</span></li>
-                    <li><span>Students looking for <b>extra Slovak language resources</b> beyond weekly classes.</span></li>
-                    <li><span>Those interested in <b>additional cultural and educational activities</b>.</span></li>
-                </ul>  
+                        </section>
+                        
+                        <section class="registration-section"><h2 class="underline">Consent Form</h2>
+                                <p><span>To ensure the <b>safety, privacy, and well-being</b> of all students and our members, we require <b>a completed Consent Form</b> for everyone enrolled at <b>Slovenské Vzdelávacie Centrum – South Manchester</b>. This form allows us to collect necessary permissions from individuals, parents or guardians regarding key aspects of our educational and community activities.</span></p>
+                
 
-            <br>
+                            <div id="horizontal-line"></div>
+               
+                            <h3>What the Consent Form Covers</h3>
+                
+                            <ul class="custom-list-white dot">
+                                <h3>Emergency Medical Treatment</h3>
+                                <li><span>Permission for staff to seek medical assistance in case of an emergency.</span></li>
+                            </ul>
 
-            <h3>Express Your Interest</h3> 
-            <p><span>If you would like to become a member, please fill out our <b>Monthly Membership Interest Form <a href="#">here</a></b>. We will contact you once the program is finalised.</span></p>
+                            <ul class="custom-list-white dot">
+                                <h3><b>Photo & Video Consent (Optional)</b></h3>
+                                <li><span>Permission for your child to be included in photos or videos used for school projects, website, social media, or promotional materials.</span></li>
+                            </ul>
 
-            <h1 class="underline">Consent Form</h1>
-            <p><span>To ensure the <b>safety, privacy, and well-being</b> of all students and our members, we require <b>a completed Consent Form</b> for everyone enrolled at <b>Slovenské Vzdelávacie Centrum – South Manchester</b>. This form allows us to collect necessary permissions from individuals, parents or guardians regarding key aspects of our educational and community activities.</span></p>
+                            <ul class="custom-list-white dot">
+                                <h3><b>Data Protection (GDPR Compliance)</b></h3>
+                                <li><span>Agreement on how we collect, store, and use personal data in line with UK GDPR regulations.</span></li>
+                            </ul>
 
-            <br>
-                <div id="horizontal-line"></div>
-            <br>
+                            <ul class="custom-list-white dot">
+                                <h3><span><b>Participation in Off-Site Activities & School Trips (Optional)</b></span></h3>
+                                <li><span>Permission for your child to attend local educational outings, cultural events, or workshops outside the school premises.</span></li>
+                            </ul>
 
-            <h3>What the Consent Form Covers</h3>
+                            <ul class="custom-list-white dot">
+                                <h3><span><b>Special Educational Needs (SEN) & Medical Information</b></span></h3>
+                                <li><span>Space to provide details on allergies, medical conditions, or any special support requirements.</span></li>
+                            </ul>
+                            
+                            <div id="horizontal-line"></div>
 
-            <br>
+                            <h3>How to Submit the Consent Form</h3>
 
-            <ul class="custom-list dot">
-                <h4>Emergency Medical Treatment</h4>
+                            <ul class="custom-list-white oval">
+                                <h3><span><b>1. Complete the Form:</b></span></h3>
+                                <li><span>Access the form &#8203<a href="#">here</a>.</span></li>
+                                <li><span>Paper copies are available upon request.</span></li>
+                            </ul> 
 
-                <li>Permission for staff to seek medical assistance in case of an emergency.</li>
-                <li><b>Photo & Video Consent (Optional)</b> – Permission for your child to be included in photos or videos used for school projects, website, social media, or promotional materials.</li>
-                <li><b>Data Protection (GDPR Compliance)</b> – Agreement on how we collect, store, and use personal data in line with UK GDPR regulations.</li>
-                <li><b>Participation in Off-Site Activities & School Trips (Optional)</b> – Permission for your child to attend local educational outings, cultural events, or workshops outside the school premises.</li>
-                <li><b>Special Educational Needs (SEN) & Medical Information</b> – Space to provide details on allergies, medical conditions, or any special support requirements.</li>
-            </ul>
-            
-            <h4>How to Submit the Consent Form</h4>
-            <ol>
-                <li><b>Complete the Form:</b> <a href="#">Access it here</a> (paper copies available upon request).</li>
-                <li><b>Submit the Form:</b>
-                    <ul>
-                        <li><b>Online:</b> Fill out and submit electronically.</li>
-                        <li><b>In-person:</b> Bring the completed form to your first session.</li>
-                        <li><b>By email:</b> Scan and send it to <a href="mailto:svcmanchester@yahoo.com">svcmanchester@yahoo.com</a></li>
-                    </ul>
-                </li>
-            </ol>
-            <p><b>Note:</b> A completed Consent Form is required before attending classes.</p>
-            
-            <p><b>Need More Information?</b></p>
-            <p>If you have any questions or need to update your child’s information, please contact us.</p>
-    
+                            <ul class="custom-list-white oval">
+                                <h3><span><b>2. Submit the Form</b></span></h3>
+                                <li><span><b>Online:</b>&#8203 Fill out and submit electronically.</span></li>
+                                <li><span><b>In-person:</b>&#8203 Bring the completed form to your first session.</span></li>
+                                <li><span><b>By email:</b>&#8203 Scan and send it to &#8203<a href="mailto:svcmanchester@yahoo.com">svcmanchester@yahoo.com</a></span></li>
+                            </ul> 
 
+                            <p><b>Note:</b> A completed Consent Form is required before attending classes.</p>
+                            
+                            <div id="horizontal-line"></div>
 
+                            <p><span><b>Need More Information?</b></span></p>
+                            <p>If you have any questions or need to update your child’s information, please contact us.</p>
+                            
+                        </section>
+                    </div>
+                    
+                    <!-- Right Section - Form -->
+                    <div class="form-section">
+                        <form class="request-form" id="registration-form">
+                            <h2>Request a Paper Copy</h2>
+                            <select id="form-type" name="form-type" required aria-label="Form Type">
+                                <option value="" disabled selected hidden>Select Form Type</option>
+                                <option value="school">Slovak School Registration</option>
+                                <option value="volunteer">Volunteer Registration</option>
+                                <option value="consent">Consent Form</option>
+                            </select>
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
+                            <input type="text" name="address" placeholder="Address" required>
+                            <button type="submit">Submit</button>
+                            <p id="phone-error" style="color: red; display: none;">Please enter a valid phone number (only numbers, 10-15 digits).</p>
+                        </form>
+
+                        <div id="success-popup" class="popup">
+                            <div class="popup-content">
+                                <h2>🎉 Request Received!</h2>
+                                <p>Thank you! We've received your request and will process it shortly.</p>
+                                <button id="close-popup">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

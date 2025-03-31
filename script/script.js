@@ -81,41 +81,68 @@ btns.forEach((btn, i) => {
 });
 
 //Membership page
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registration-form');
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+    const popup = document.getElementById('success-popup');
+    const closePopup = document.getElementById('close-popup');
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Membership page loaded");
-    
-    const membershipLinks = document.querySelectorAll("a[href='#']");
-    membershipLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            alert("This feature is coming soon!");
-        });
+    const phonePattern = /^\+?[0-9]{10,15}$/;
+
+    phoneInput.addEventListener('input', function() {
+        let cleanedValue = phoneInput.value.replace(/\D/g, '');
+        if (phoneInput.value.startsWith('+')) {
+            phoneInput.value = '+' + cleanedValue;
+        } else {
+            phoneInput.value = cleanedValue;
+        }
     });
 
-    // Form validation (if needed)
-    const forms = document.querySelectorAll("form");
-    forms.forEach(form => {
-        form.addEventListener("submit", function (event) {
-            const inputs = form.querySelectorAll("input, textarea");
-            let valid = true;
-            
-            inputs.forEach(input => {
-                if (input.hasAttribute("required") && !input.value.trim()) {
-                    valid = false;
-                    input.style.border = "2px solid red";
-                } else {
-                    input.style.border = "";
-                }
-            });
+    form.addEventListener('submit', function(event) {
+        let isValid = true;
 
-            if (!valid) {
-                event.preventDefault();
-                alert("Please fill in all required fields.");
-            }
-        });
+        if (!phonePattern.test(phoneInput.value)) {
+            phoneError.style.display = 'block';
+            isValid = false;
+        } else {
+            phoneError.style.display = 'none';
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+            return;
+        }
+
+        event.preventDefault();
+        popup.classList.add("show");
+    });
+
+    closePopup.addEventListener("click", function() {
+        popup.classList.remove("show");
+        setTimeout(() => {
+            form.reset(); 
+        }, 300); 
     });
 });
 
-//Animate On Scroll
+/* Message in Membership */
+
+const toastContainer = document.querySelector(".toast-container");
+const closeBtn = document.querySelector(".toast-container .close");
+const toastLink = document.querySelector(".toast-container a");
+
+setTimeout(() => {
+  toastContainer.classList.add("active");
+}, 1000);
+
+const stopDisplayingToast = () => {
+  toastContainer.classList.remove("active");
+};
+
+closeBtn.addEventListener("click", stopDisplayingToast);
+toastLink.addEventListener("click", stopDisplayingToast);
+
+
+
 
