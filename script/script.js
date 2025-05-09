@@ -142,7 +142,3 @@ const stopDisplayingToast = () => {
 
 closeBtn.addEventListener("click", stopDisplayingToast);
 toastLink.addEventListener("click", stopDisplayingToast);
-
-
-
-
